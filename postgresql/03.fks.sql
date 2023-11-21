@@ -122,3 +122,11 @@ ALTER TABLE loc_data ADD CONSTRAINT fk_loc_data_wea__data_type FOREIGN KEY(data_
 ALTER TABLE gen_alarm ADD CONSTRAINT fk_gen_alarm__data_category FOREIGN KEY(data_cat_id) REFERENCES data_category(data_cat_id_auto);--
 ALTER TABLE loc_gen_alarm ADD CONSTRAINT fk_loc_gen_alarm__data_category FOREIGN KEY(data_cat_id) REFERENCES data_category(data_cat_id_auto);--
 ALTER TABLE cli_gen_alarm ADD CONSTRAINT fk_cli_gen_alarm__data_category FOREIGN KEY(data_cat_id) REFERENCES data_category(data_cat_id_auto);--
+
+ALTER TABLE cli_loc_usr_setting ADD CONSTRAINT fk_cli_loc_usr_setting__users FOREIGN KEY(usr_id) REFERENCES users(usr_id_auto);-- 
+ALTER TABLE cli_loc_usr_setting ADD CONSTRAINT fk_cli_loc_usr_setting__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);-- 
+ALTER TABLE cli_loc_usr_setting ADD CONSTRAINT fk_cli_loc_usr_setting__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);-- 
+ALTER TABLE cli_loc_alert ADD CONSTRAINT fk_cli_loc_alert__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);-- 
+ALTER TABLE cli_loc_alert ADD CONSTRAINT fk_cli_loc_alert__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);-- 
+ALTER TABLE cli_loc_usr_alert ADD CONSTRAINT fk_cli_loc_usr_alert__users FOREIGN KEY(usr_id) REFERENCES users(usr_id_auto);-- 
+ALTER TABLE cli_loc_usr_alert ADD CONSTRAINT fk_cli_loc_usr_alert__cli_loc_alert FOREIGN KEY(cli_id, loc_id, cli_loc_alert_id) REFERENCES cli_loc_alert(cli_id, loc_id, cli_loc_alert_id_auto);-- 

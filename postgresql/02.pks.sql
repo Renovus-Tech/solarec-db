@@ -81,3 +81,7 @@ ALTER TABLE doc_type ADD PRIMARY KEY(doc_type_id_auto);--
 
 
 ALTER TABLE loc_data_weather ADD PRIMARY KEY(cli_id, loc_id, data_date_added, data_date, data_type_id);--
+
+ALTER TABLE cli_loc_usr_setting ADD PRIMARY KEY (cli_id, loc_id, usr_id);--
+ALTER TABLE cli_loc_alert ADD PRIMARY KEY (cli_id, loc_id, cli_loc_alert_id_auto);--
+ALTER TABLE cli_loc_usr_alert ADD PRIMARY KEY (cli_id, loc_id, usr_id, cli_loc_alert_id);--

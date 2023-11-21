@@ -677,3 +677,28 @@ CREATE TABLE loc_data_weather (
   data_pro_id INTEGER NOT NULL,
   data_value double precision NULL
 );--
+
+CREATE TABLE cli_loc_usr_setting (
+  cli_id INTEGER NOT NULL,
+  loc_id INTEGER NOT NULL,
+  usr_id INTEGER NOT NULL,
+  cli_loc_alert_flags VARCHAR(20) NULL
+);--
+
+CREATE TABLE cli_loc_alert (
+  cli_id INTEGER NOT NULL,
+  loc_id INTEGER NOT NULL,
+  cli_loc_alert_id_auto SERIAL NOT NULL,
+  cli_loc_alert_added timestamp without time zone NOT NULL,
+  cli_loc_alert_type INTEGER NOT NULL,
+  cli_loc_alert_data varchar
+);--
+
+CREATE TABLE cli_loc_usr_alert (
+  cli_id INTEGER,
+  loc_id INTEGER,
+  usr_id INTEGER,
+  cli_loc_alert_id INTEGER,
+  cli_loc_usr_alert_send_date timestamp without time zone NOT NULL,
+  cli_loc_usr_alert_send_result VARCHAR
+);--
