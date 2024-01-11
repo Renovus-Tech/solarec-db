@@ -130,3 +130,8 @@ ALTER TABLE cli_loc_alert ADD CONSTRAINT fk_cli_loc_alert__client FOREIGN KEY(cl
 ALTER TABLE cli_loc_alert ADD CONSTRAINT fk_cli_loc_alert__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);-- 
 ALTER TABLE cli_loc_usr_alert ADD CONSTRAINT fk_cli_loc_usr_alert__users FOREIGN KEY(usr_id) REFERENCES users(usr_id_auto);-- 
 ALTER TABLE cli_loc_usr_alert ADD CONSTRAINT fk_cli_loc_usr_alert__cli_loc_alert FOREIGN KEY(cli_id, loc_id, cli_loc_alert_id) REFERENCES cli_loc_alert(cli_id, loc_id, cli_loc_alert_id_auto);-- 
+
+ALTER TABLE cli_gen_alert ADD CONSTRAINT fk_cli_gen_alert__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);-- 
+ALTER TABLE cli_gen_alert ADD CONSTRAINT fk_cli_gen_alert__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);-- 
+ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__users FOREIGN KEY(usr_id) REFERENCES users(usr_id_auto);-- 
+ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__cli_gen_alert FOREIGN KEY(cli_id, gen_id, cli_gen_alert_id) REFERENCES cli_gen_alert(cli_id, gen_id, cli_gen_alert_id_auto);-- 

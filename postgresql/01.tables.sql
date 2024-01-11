@@ -703,3 +703,23 @@ CREATE TABLE cli_loc_usr_alert (
   cli_loc_usr_alert_send_date timestamp without time zone NOT NULL,
   cli_loc_usr_alert_send_result VARCHAR
 );--
+
+
+CREATE TABLE cli_gen_alert (
+  cli_id INTEGER NOT NULL,
+  gen_id INTEGER NOT NULL,
+  cli_gen_alert_id_auto SERIAL NOT NULL,
+  cli_gen_alert_added timestamp without time zone NOT NULL,
+  cli_gen_alert_type INTEGER NOT NULL,
+  cli_gen_alert_data varchar,
+  cli_gen_alert_flags varchar(20)
+);--
+
+CREATE TABLE cli_gen_usr_alert (
+  cli_id INTEGER,
+  gen_id INTEGER,
+  usr_id INTEGER,
+  cli_gen_alert_id INTEGER,
+  cli_gen_usr_alert_send_date timestamp without time zone NOT NULL,
+  cli_gen_usr_alert_send_result VARCHAR
+);--
