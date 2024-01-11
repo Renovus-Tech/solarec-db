@@ -691,7 +691,8 @@ CREATE TABLE cli_loc_alert (
   cli_loc_alert_id_auto SERIAL NOT NULL,
   cli_loc_alert_added timestamp without time zone NOT NULL,
   cli_loc_alert_type INTEGER NOT NULL,
-  cli_loc_alert_data varchar
+  cli_loc_alert_data varchar,
+  cli_loc_alert_flags varchar(20)
 );--
 
 CREATE TABLE cli_loc_usr_alert (
