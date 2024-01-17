@@ -67,3 +67,6 @@ CREATE TABLE cli_gen_usr_alert (
 ALTER TABLE cli_gen_usr_alert ADD PRIMARY KEY (cli_id, gen_id, usr_id, cli_gen_alert_id);--
 ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__users FOREIGN KEY(usr_id) REFERENCES users(usr_id_auto);-- 
 ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__cli_gen_alert FOREIGN KEY(cli_id, gen_id, cli_gen_alert_id) REFERENCES cli_gen_alert(cli_id, gen_id, cli_gen_alert_id_auto);-- 
+
+ALTER TABLE cli_loc_alert ADD COLUMN cli_loc_alert_trigger timestamp without time zone NOT NULL;--
+ALTER TABLE cli_gen_alert ADD COLUMN cli_gen_alert_trigger timestamp without time zone NOT NULL;--

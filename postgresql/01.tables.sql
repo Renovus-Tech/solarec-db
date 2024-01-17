@@ -692,7 +692,8 @@ CREATE TABLE cli_loc_alert (
   cli_loc_alert_added timestamp without time zone NOT NULL,
   cli_loc_alert_type INTEGER NOT NULL,
   cli_loc_alert_data varchar,
-  cli_loc_alert_flags varchar(20)
+  cli_loc_alert_flags varchar(20),
+  cli_loc_alert_trigger timestamp without time zone NOT NULL
 );--
 
 CREATE TABLE cli_loc_usr_alert (
@@ -712,7 +713,8 @@ CREATE TABLE cli_gen_alert (
   cli_gen_alert_added timestamp without time zone NOT NULL,
   cli_gen_alert_type INTEGER NOT NULL,
   cli_gen_alert_data varchar,
-  cli_gen_alert_flags varchar(20)
+  cli_gen_alert_flags varchar(20),
+  cli_gen_alert_trigger timestamp without time zone NOT NULL
 );--
 
 CREATE TABLE cli_gen_usr_alert (
