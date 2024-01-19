@@ -70,3 +70,19 @@ ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__cli_gen_alert
 
 ALTER TABLE cli_loc_alert ADD COLUMN cli_loc_alert_trigger timestamp without time zone NOT NULL;--
 ALTER TABLE cli_gen_alert ADD COLUMN cli_gen_alert_trigger timestamp without time zone NOT NULL;--
+
+
+CREATE TABLE settings (
+  set_name VARCHAR(200) NOT NULL,
+  set_cat_name VARCHAR(200) NOT NULL,
+  set_type VARCHAR(200) NOT NULL,
+  set_unit VARCHAR(100) NULL,
+  set_value_default VARCHAR(200) NULL,
+  set_value_min VARCHAR(100) NULL,
+  set_value_max VARCHAR(100) NULL,
+  set_flags VARCHAR(20) NULL
+);--
+
+ALTER TABLE settings ADD PRIMARY KEY (set_name);--
+ALTER TABLE cli_setting ADD CONSTRAINT fk_cli_set__setting FOREIGN KEY (cli_set_name) REFERENCES settings(set_name);--
+ALTER TABLE usr_setting ADD CONSTRAINT fk_usr_set__setting FOREIGN KEY (usr_set_name) REFERENCES settings(set_name);--

@@ -725,3 +725,15 @@ CREATE TABLE cli_gen_usr_alert (
   cli_gen_usr_alert_send_date timestamp without time zone NOT NULL,
   cli_gen_usr_alert_send_result VARCHAR
 );--
+
+
+CREATE TABLE settings (
+  set_name VARCHAR(200) NOT NULL,
+  set_cat_name VARCHAR(200) NOT NULL,
+  set_type VARCHAR(200) NOT NULL,
+  set_unit VARCHAR(100) NULL,
+  set_value_default VARCHAR(200) NULL,
+  set_value_min VARCHAR(100) NULL,
+  set_value_max VARCHAR(100) NULL,
+  set_flags VARCHAR(20) NULL
+);--
