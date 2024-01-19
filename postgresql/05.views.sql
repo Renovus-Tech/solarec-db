@@ -15,12 +15,12 @@ create view view_sta_data as select cli_id, sta_id, date_trunc('minute', data_da
 
 create view view_documents_sorted as select *, COALESCE(doc_date_from, doc_date_added) as doc_date_sort from document;--
 
-CREATE VIEW vw_cli_settings AS
+CREATE VIEW vw_cli_setting AS
 select * from 
 settings s left join cli_setting cs on s.set_name = cs.cli_set_name
 where s.set_flags ilike '_1%';--
 
-CREATE VIEW vw_usr_settings AS
+CREATE VIEW vw_usr_setting AS
 select * from 
 settings s left join usr_setting us on s.set_name = us.usr_set_name
 where s.set_flags ilike '1%';--
