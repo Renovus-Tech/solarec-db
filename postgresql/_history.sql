@@ -86,3 +86,8 @@ CREATE TABLE settings (
 ALTER TABLE settings ADD PRIMARY KEY (set_name);--
 ALTER TABLE cli_setting ADD CONSTRAINT fk_cli_set__setting FOREIGN KEY (cli_set_name) REFERENCES settings(set_name);--
 ALTER TABLE usr_setting ADD CONSTRAINT fk_usr_set__setting FOREIGN KEY (usr_set_name) REFERENCES settings(set_name);--
+
+CREATE VIEW vw_cli_gen_alert_by_location AS
+select cga.*, g.loc_id from
+generator g
+join cli_gen_alert cga on g.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--

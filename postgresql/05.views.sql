@@ -50,3 +50,9 @@ from
 (select s.*, u.usr_id_auto from settings s, users u) as s
 left join usr_setting us on s.set_name = us.usr_set_name and s.usr_id_auto = us.usr_id
 where s.set_flags ilike '1%';--
+
+
+CREATE VIEW vw_cli_gen_alert_by_location AS
+select cga.*, g.loc_id from
+generator g
+join cli_gen_alert cga on g.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--
