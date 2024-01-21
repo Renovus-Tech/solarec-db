@@ -53,6 +53,28 @@ where s.set_flags ilike '1%';--
 
 
 CREATE VIEW vw_cli_gen_alert_by_location AS
-select cga.*, g.loc_id from
-generator g
-join cli_gen_alert cga on g.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--
+select
+ cga.*,
+ g.loc_id,
+ g.gen_name,
+ g.gen_code,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join generator g on g.cli_id = l.cli_id and g.loc_id = l.loc_id_auto
+join cli_gen_alert cga on l.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--
+
+
+CREATE VIEW vw_cli_loc_alert_full AS 
+select
+ cla.*,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join cli_loc_alert cla on l.cli_id = cla.cli_id and l.loc_id_auto = cla.loc_id;--
