@@ -91,3 +91,9 @@ CREATE VIEW vw_cli_gen_alert_by_location AS
 select cga.*, g.loc_id from
 generator g
 join cli_gen_alert cga on g.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--
+
+ALTER TABLE cli_loc_alert ALTER COLUMN cli_loc_alert_flags SET DEFAULT '00000';--
+ALTER TABLE cli_gen_alert ALTER COLUMN cli_gen_alert_flags SET DEFAULT '00000';--
+
+update cli_loc_alert set cli_loc_alert_flags = '00000' where cli_loc_alert_flags is null;--
+update cli_gen_alert set cli_gen_alert_flags = '00000' where cli_gen_alert_flags is null;--
