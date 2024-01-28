@@ -89,3 +89,5 @@ ALTER TABLE cli_gen_alert ADD PRIMARY KEY (cli_id, gen_id, cli_gen_alert_id_auto
 ALTER TABLE cli_gen_usr_alert ADD PRIMARY KEY (cli_id, gen_id, usr_id, cli_gen_alert_id);--
 
 ALTER TABLE settings ADD PRIMARY KEY (set_name);--
+
+ALTER TABLE ember_country_overview ADD PRIMARY KEY (country_or_region, year);--

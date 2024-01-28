@@ -737,3 +737,26 @@ CREATE TABLE settings (
   set_value_max VARCHAR(100) NULL,
   set_flags VARCHAR(20) NULL
 );--
+
+
+CREATE TABLE ember_country_overview (
+  country_or_region varchar(100),
+  country_code varchar(100),
+  year integer,
+  demand_twh double precision,
+  demand_mwh_per_capita double precision,
+  emissions_intensity_gco2_per_kwh double precision,
+  continent varchar(100),
+  ember_region varchar(100),
+  eu_flag double precision NULL,
+  g20_flag double precision NULL,
+  g7_flag double precision NULL,
+  oecd_flag double precision NULL,
+  world_demand_rank double precision NULL,
+  region_demand_rank double precision NULL,
+  oecd_demand_rank double precision NULL,
+  eu_demand_rank double precision NULL,
+  latest_year integer,
+  coal_deadline integer,
+  clean_deadline integer
+);--

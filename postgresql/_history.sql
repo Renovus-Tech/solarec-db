@@ -132,3 +132,28 @@ client c
 join location l on c.cli_id_auto = l.cli_id
 join generator g on g.cli_id = l.cli_id and g.loc_id = l.loc_id_auto
 join cli_gen_alert cga on l.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id;--
+
+
+CREATE TABLE ember_country_overview (
+  country_or_region varchar(100),
+  country_code varchar(100),
+  year integer,
+  demand_twh double precision,
+  demand_mwh_per_capita double precision,
+  emissions_intensity_gco2_per_kwh double precision,
+  continent varchar(100),
+  ember_region varchar(100),
+  eu_flag integer,
+  g20_flag integer,
+  g7_flag integer,
+  oecd_flag integer,
+  world_demand_rank integer,
+  region_demand_rank integer,
+  oecd_demand_rank integer,
+  eu_demand_rank integer,
+  latest_year integer,
+  coal_deadline integer,
+  clean_deadline integer
+);--
+
+ALTER TABLE ember_country_overview ADD PRIMARY KEY (country_or_region, year);--
