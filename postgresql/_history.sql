@@ -157,3 +157,52 @@ CREATE TABLE ember_country_overview (
 );--
 
 ALTER TABLE ember_country_overview ADD PRIMARY KEY (country_or_region, year);--
+
+
+CREATE TABLE data_def_parameter (
+  data_def_id INTEGER NOT NULL,
+  data_def_par_id_auto SERIAL NOT NULL,
+  data_def_par_name VARCHAR(100) NOT NULL,
+  data_def_description VARCHAR(500) NULL
+);--
+
+ALTER TABLE data_def_parameter ADD PRIMARY KEY (data_def_id, data_def_par_id_auto);--
+ALTER TABLE data_def_parameter ADD CONSTRAINT fk_data_def_par__data_definition FOREIGN KEY(data_def_id) REFERENCES data_definition(data_def_id_auto);--
+
+CREATE TABLE cli_data_def_parameter (
+  cli_id INTEGER NOT NULL,
+  data_def_id INTEGER NOT NULL,
+  data_def_par_id INTEGER NOT NULL,
+  cli_data_def_par_value VARCHAR(255) NOT NULL
+);--
+
+ALTER TABLE cli_data_def_parameter ADD PRIMARY KEY (cli_id, data_def_id, data_def_par_id);--
+ALTER TABLE cli_data_def_parameter ADD CONSTRAINT fk_cli_data_def_par__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--
+ALTER TABLE cli_data_def_parameter ADD CONSTRAINT fk_cli_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+
+
+CREATE TABLE loc_data_def_parameter (
+  cli_id INTEGER NOT NULL,
+  loc_id INTEGER NOT NULL,
+  data_def_id INTEGER NOT NULL,
+  data_def_par_id INTEGER NOT NULL,
+  cli_data_def_par_value VARCHAR(255) NOT NULL
+);--
+
+ALTER TABLE loc_data_def_parameter ADD PRIMARY KEY (cli_id, loc_id, data_def_id, data_def_par_id);--
+ALTER TABLE loc_data_def_parameter ADD CONSTRAINT fk_loc_data_def_par__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);--
+ALTER TABLE loc_data_def_parameter ADD CONSTRAINT fk_loc_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+
+
+CREATE TABLE gen_data_def_parameter (
+  cli_id INTEGER NOT NULL,
+  gen_id INTEGER NOT NULL,
+  data_def_id INTEGER NOT NULL,
+  data_def_par_id INTEGER NOT NULL,
+  cli_data_def_par_value VARCHAR(255) NOT NULL
+);--
+
+ALTER TABLE gen_data_def_parameter ADD PRIMARY KEY (cli_id, gen_id, data_def_id, data_def_par_id);--
+ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
+ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+

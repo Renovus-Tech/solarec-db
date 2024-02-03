@@ -138,3 +138,13 @@ ALTER TABLE cli_gen_usr_alert ADD CONSTRAINT fk_cli_gen_usr_alert__cli_gen_alert
 
 ALTER TABLE cli_setting ADD CONSTRAINT fk_cli_set__setting FOREIGN KEY (cli_set_name) REFERENCES settings(set_name);--
 ALTER TABLE usr_setting ADD CONSTRAINT fk_usr_set__setting FOREIGN KEY (usr_set_name) REFERENCES settings(set_name);--
+
+
+ALTER TABLE data_def_parameter ADD CONSTRAINT fk_data_def_par__data_definition FOREIGN KEY(data_def_id) REFERENCES data_definition(data_def_id_auto);--
+ALTER TABLE cli_data_def_parameter ADD CONSTRAINT fk_cli_data_def_par__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--
+ALTER TABLE cli_data_def_parameter ADD CONSTRAINT fk_cli_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+ALTER TABLE loc_data_def_parameter ADD CONSTRAINT fk_loc_data_def_par__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);--
+ALTER TABLE loc_data_def_parameter ADD CONSTRAINT fk_loc_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
+ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
+
