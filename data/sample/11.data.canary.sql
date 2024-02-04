@@ -22,7 +22,6 @@ values (1, 1, 'Domus', 'Canelones, Uruguay', -34.7833, -56.0112, '10', 'Domus', 
 insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code)
 values (1, 1, '1', -34.7833, -56.0112, 'ABB', 'ABB Trio 50.0', '19384220', 50, '1');--1
 
-
 insert into station(cli_id, loc_id, sta_name, sta_coord_lat, sta_coord_lng, sta_code)
 values (1, 1, 'Met_1', -34.7833, -56.0112, 'Met_1');--1
 
@@ -32,3 +31,22 @@ insert into loc_user (cli_id, usr_id, loc_id, cli_user_date_added) values (1, 1,
 insert into usr_profile (usr_id, prf_id, cli_id, usr_prf_date_added) values (1, 1, 1, current_timestamp);--
 insert into usr_profile (usr_id, prf_id, cli_id, usr_prf_date_added) values (1, 2, 1, current_timestamp);--
 
+
+insert into data_definition(data_def_name, data_def_description, data_def_executable, data_Def_flags)
+values ('Inverter Fimer', null, 'tech.renovus.solarec.inverters.brand.fimer.FimerInverterService', '01');-- 2
+
+insert into data_definition(data_def_name, data_def_description, data_def_executable, data_Def_flags)
+values ('Inverter Fronius', null, 'tech.renovus.solarec.inverters.brand.fronius.FroniusInverterService', '01');-- 3
+
+insert into data_definition(data_def_name, data_def_description, data_def_executable, data_Def_flags)
+values ('Inverter SMA', null, 'tech.renovus.solarec.inverters.brand.sma.SmaInverterService', '01');-- 4
+
+
+insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id)
+values (1, 1, 'Fimer #1', -34.7833, -56.0112, 'Fimer', 'Sample', 'Sample #1', 50, 'Fimer_1', 2);--2
+
+insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id)
+values (1, 1, 'Fronius #1', -34.7833, -56.0112, 'Fronius', 'Sample', 'Sample #1', 50, 'Fronius_1', 3);--3
+
+insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id)
+values (1, 1, 'SMA #1', -34.7833, -56.0112, 'SMA', 'Sample', 'Sample #1', 50, 'SMA_1', 4);--4
