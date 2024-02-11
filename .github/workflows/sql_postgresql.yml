@@ -41,4 +41,4 @@ jobs:
       - name: Execute SQL files
         run: |
           # psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_NAME }} -f create_tables.sql
-          psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_NAME }} -f ./postgresql/01.tables.sql
+          echo "${{ secrets.DB_PASSWORD }}" | psql -h localhost -U ${{ secrets.DB_USER }} -d ${{ secrets.DB_NAME }} -W -f ./postgresql/01.tables.sql
