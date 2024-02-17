@@ -206,3 +206,22 @@ ALTER TABLE gen_data_def_parameter ADD PRIMARY KEY (cli_id, gen_id, data_def_id,
 ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
 ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
 
+
+
+CREATE VIEW vw_cli_data_def_parameter AS
+SELECT c.cli_id_auto as cli_id, ddp.*, cddp.data_def_par_id, cddp.cli_data_def_par_value FROM
+client c
+JOIN data_def_parameter ddp ON c.data_def_id = ddp.data_def_id
+LEFT JOIN cli_data_def_parameter cddp ON c.cli_id_auto = cddp.cli_id AND ddp.data_def_id = cddp.data_def_id AND ddp.data_def_par_id_auto = cddp.data_def_par_id;--
+
+CREATE VIEW vw_loc_data_def_parameter AS
+SELECT l.cli_id, l.loc_id_auto as loc_id, ddp.*, lddp.data_def_par_id, lddp.loc_data_def_par_value FROM
+location l
+JOIN data_def_parameter ddp ON l.data_def_id = ddp.data_def_id
+LEFT JOIN loc_data_def_parameter lddp ON l.cli_id  = lddp.cli_id AND l.loc_id_auto = lddp.loc_id AND ddp.data_def_id = lddp.data_def_id AND ddp.data_def_par_id_auto = lddp.data_def_par_id;--
+
+CREATE VIEW vw_gen_data_def_parameter AS
+SELECT g.cli_id, g.gen_id_auto as gen_id, ddp.*, gddp.data_def_par_id, gddp.gen_data_def_par_value FROM
+generator g
+JOIN data_def_parameter ddp ON g.data_def_id = ddp.data_def_id
+LEFT JOIN gen_data_def_parameter gddp ON g.cli_id = gddp.cli_id  AND g.gen_id_auto = gddp.gen_id AND ddp.data_def_id = gddp.data_def_id AND ddp.data_def_par_id_auto = gddp.data_def_par_id;--
