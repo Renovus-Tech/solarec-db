@@ -66,8 +66,10 @@ insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.client.client_id');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.client.client_secret');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.client.resource_owner');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.location.plant_id');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.generator.device_id');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.generator.last_retrieve');--
+
 
 
 insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id, gen_flags)
@@ -78,3 +80,7 @@ values (1, 1, 'Fronius #1', -34.7833, -56.0112, 'Fronius', 'Sample', 'Sample #1'
 
 insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id, gen_flags)
 values (1, 1, 'SMA #1', -34.7833, -56.0112, 'SMA', 'Sample', 'Sample #1', 50, 'SMA_1', 4, '1');--4
+
+
+INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_TOTAL_CLOUD_COVER', 506);--
+INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_PRECIPITATION', 507);--

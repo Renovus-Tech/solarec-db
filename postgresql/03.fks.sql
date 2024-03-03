@@ -3,6 +3,7 @@ ALTER TABLE cli_user ADD CONSTRAINT fk_cli_usr__client FOREIGN KEY(cli_id) REFER
 ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);-- 
 ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__data_definition FOREIGN KEY(data_def_id) REFERENCES data_definition(data_def_id_auto);-- 
 ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);-- 
+ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
 ALTER TABLE document ADD CONSTRAINT fk_doc__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--
 ALTER TABLE doc_generator ADD CONSTRAINT fk_doc_gen__document FOREIGN KEY(cli_id, doc_id) REFERENCES document(cli_id, doc_id_auto);-- 
 ALTER TABLE doc_generator ADD CONSTRAINT fk_doc_gen__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--

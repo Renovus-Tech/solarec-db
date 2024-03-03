@@ -225,3 +225,7 @@ SELECT g.cli_id, g.gen_id_auto as gen_id, ddp.*, gddp.data_def_par_id, gddp.gen_
 generator g
 JOIN data_def_parameter ddp ON g.data_def_id = ddp.data_def_id
 LEFT JOIN gen_data_def_parameter gddp ON g.cli_id = gddp.cli_id  AND g.gen_id_auto = gddp.gen_id AND ddp.data_def_id = gddp.data_def_id AND ddp.data_def_par_id_auto = gddp.data_def_par_id;--
+
+
+ALTER TABLE data_processing ADD COLUMN gen_id INTEGER NULL;--
+ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--

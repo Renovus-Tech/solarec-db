@@ -39,6 +39,7 @@ CREATE TABLE data_processing (
   data_def_id INTEGER NOT NULL,
   cli_id INTEGER NOT NULL,
   loc_id INTEGER NULL,
+  gen_id INTEGER NULL,
   tri_id INTEGER NULL,
   data_pro_file_name VARCHAR(100) NULL,
   data_pro_date_start timestamp with time zone NULL,
@@ -150,7 +151,7 @@ CREATE TABLE gen_statistic (
 CREATE TABLE location (
   cli_id INTEGER NOT NULL,
   loc_id_auto SERIAL NOT NULL,
-  data_def_id INTEGER NOT NULL,
+  data_def_id INTEGER NULL,
   loc_name VARCHAR(100) NULL,
   loc_address VARCHAR(500) NULL,
   loc_state VARCHAR(100) NULL,
