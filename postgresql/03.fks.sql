@@ -149,3 +149,5 @@ ALTER TABLE loc_data_def_parameter ADD CONSTRAINT fk_loc_data_def_par__data_def_
 ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
 ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__data_def_parameter FOREIGN KEY(data_def_id, data_def_par_id) REFERENCES data_def_parameter(data_def_id, data_def_par_id_auto);--
 
+
+ALTER TABLE cli_metadata ADD CONSTRAINT fk_cli_metdat__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--

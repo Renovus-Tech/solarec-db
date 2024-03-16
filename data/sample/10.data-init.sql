@@ -186,11 +186,11 @@ update functionality set fnc_flags = '010' where fnc_name = 'AU_FAUL_ANALYSIS';
 
 insert into prf_functionality (prf_id, fnc_id) select prf_id_auto, fnc_id_auto from profile p, functionality f;--
 
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('fiscalYearEndMonth', 'otherSettings', 'number', 'month', '12', '1', '12', '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('dRecsSoldPorcentage', 'drec', 'number', '%', '50', '0', '100', '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('dRecsPrice', 'drec', 'number', 'USD', '20', '0', null, '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertDataAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertNegativeChangeExceeding', 'alerts', 'number', '%', '6', '0', '100', '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertTimeBasedAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '01');--
-insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('language', 'otherSettings', 'language', 'language', 'EN', null, null, '10');
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('fiscalYearEndMonth', 'otherSettings', 'number', 'month', '12', '1', '12', '010');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('certSoldPorcentage', 'cert', 'number', '%', '50', '0', '100', '011');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('certPrice', 'cert', 'number', 'USD', '20', '0', null, '011');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertDataAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '011');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertNegativeChangeExceeding', 'alerts', 'number', '%', '6', '0', '100', '011');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertTimeBasedAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '011');--
+insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('language', 'otherSettings', 'language', 'language', 'EN', null, null, '101');
 

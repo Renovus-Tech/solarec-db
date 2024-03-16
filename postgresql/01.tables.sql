@@ -794,3 +794,12 @@ CREATE TABLE gen_data_def_parameter (
   data_def_par_id INTEGER NOT NULL,
   cli_data_def_par_value VARCHAR(255) NOT NULL
 );--
+
+
+CREATE TABLE cli_metadata (
+  cli_id INTEGER NOT NULL,
+  metadata_name VARCHAR(100) NOT NULL,
+  metadata_title VARCHAR(200) NULL,
+  metadata_value VARCHAR(200) NULL,
+  metadata_date_added timestamp with time zone NULL
+);--

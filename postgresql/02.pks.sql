@@ -97,3 +97,5 @@ ALTER TABLE cli_data_def_parameter ADD PRIMARY KEY (cli_id, data_def_id, data_de
 ALTER TABLE loc_data_def_parameter ADD PRIMARY KEY (cli_id, loc_id, data_def_id, data_def_par_id);--
 ALTER TABLE gen_data_def_parameter ADD PRIMARY KEY (cli_id, gen_id, data_def_id, data_def_par_id);--
 
+
+ALTER TABLE cli_metadata ADD PRIMARY KEY(cli_id, metadata_name);--                                                                                                                                                                                                                                      

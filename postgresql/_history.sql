@@ -229,3 +229,18 @@ LEFT JOIN gen_data_def_parameter gddp ON g.cli_id = gddp.cli_id  AND g.gen_id_au
 
 ALTER TABLE data_processing ADD COLUMN gen_id INTEGER NULL;--
 ALTER TABLE data_processing ADD CONSTRAINT fk_data_pro__generator FOREIGN KEY(cli_id, gen_id) REFERENCES generator(cli_id, gen_id_auto);--
+
+
+---------------
+
+CREATE TABLE cli_metadata (
+  cli_id INTEGER NOT NULL,
+  metadata_name VARCHAR(100) NOT NULL,
+  metadata_title VARCHAR(200) NULL,
+  metadata_value VARCHAR(200) NULL,
+  metadata_date_added timestamp with time zone NULL
+);--
+
+ALTER TABLE cli_metadata ADD PRIMARY KEY(cli_id, metadata_name);--
+
+ALTER TABLE cli_metadata ADD CONSTRAINT fk_cli_metdat__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--
