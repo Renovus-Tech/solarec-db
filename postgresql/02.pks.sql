@@ -90,8 +90,6 @@ ALTER TABLE cli_gen_usr_alert ADD PRIMARY KEY (cli_id, gen_id, usr_id, cli_gen_a
 
 ALTER TABLE settings ADD PRIMARY KEY (set_name);--
 
-ALTER TABLE ember_country_overview ADD PRIMARY KEY (country_or_region, year);--
-
 ALTER TABLE data_def_parameter ADD PRIMARY KEY (data_def_id, data_def_par_id_auto);--
 ALTER TABLE cli_data_def_parameter ADD PRIMARY KEY (cli_id, data_def_id, data_def_par_id);--
 ALTER TABLE loc_data_def_parameter ADD PRIMARY KEY (cli_id, loc_id, data_def_id, data_def_par_id);--
@@ -99,3 +97,8 @@ ALTER TABLE gen_data_def_parameter ADD PRIMARY KEY (cli_id, gen_id, data_def_id,
 
 
 ALTER TABLE cli_metadata ADD PRIMARY KEY(cli_id, metadata_name);--                                                                                                                                                                                                                                      
+
+
+ALTER TABLE country ADD PRIMARY KEY (ctr_id_auto);--
+ALTER TABLE ctr_data ADD PRIMARY KEY(ctr_id, data_date, data_type_id);--                                                                                                                                                                                                                                
+

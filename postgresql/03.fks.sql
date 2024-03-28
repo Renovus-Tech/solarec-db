@@ -151,3 +151,9 @@ ALTER TABLE gen_data_def_parameter ADD CONSTRAINT fk_gen_data_def_par__data_def_
 
 
 ALTER TABLE cli_metadata ADD CONSTRAINT fk_cli_metdat__client FOREIGN KEY(cli_id) REFERENCES client(cli_id_auto);--
+
+ALTER TABLE ctr_data ADD CONSTRAINT fk_ctr_data__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--
+ALTER TABLE ctr_data ADD CONSTRAINT fk_ctr_data__data_processing FOREIGN KEY(data_pro_id) REFERENCES data_processing(data_pro_id_auto);--
+ALTER TABLE ctr_data ADD CONSTRAINT fk_ctr_data__data_type FOREIGN KEY(data_type_id) REFERENCES data_type(data_type_id);--
+
+ALTER TABLE location ADD CONSTRAINT fk_loc__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--

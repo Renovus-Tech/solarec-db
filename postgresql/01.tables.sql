@@ -155,8 +155,6 @@ CREATE TABLE location (
   loc_name VARCHAR(100) NULL,
   loc_address VARCHAR(500) NULL,
   loc_state VARCHAR(100) NULL,
-  loc_country VARCHAR (100) NULL,
-  loc_country_alpha_2 VARCHAR(2) NULL,
   loc_coord_lat double precision NULL,
   loc_coord_lng double precision NULL,
   loc_flags VARCHAR(20) NULL,
@@ -168,7 +166,8 @@ CREATE TABLE location (
   loc_data_date_min timestamp without time zone NULL,
   loc_type varchar(50) NULL,
   loc_gmt VARCHAR(8) NULL,
-  loc_demo_date timestamp without time zone
+  loc_demo_date timestamp without time zone,
+  ctr_id INTEGER NULL
 );--
 
 CREATE TABLE loc_user (
@@ -739,29 +738,6 @@ CREATE TABLE settings (
   set_flags VARCHAR(20) NULL
 );--
 
-
-CREATE TABLE ember_country_overview (
-  country_or_region varchar(100),
-  country_code varchar(100),
-  year integer,
-  demand_twh double precision,
-  demand_mwh_per_capita double precision,
-  emissions_intensity_gco2_per_kwh double precision,
-  continent varchar(100),
-  ember_region varchar(100),
-  eu_flag double precision NULL,
-  g20_flag double precision NULL,
-  g7_flag double precision NULL,
-  oecd_flag double precision NULL,
-  world_demand_rank double precision NULL,
-  region_demand_rank double precision NULL,
-  oecd_demand_rank double precision NULL,
-  eu_demand_rank double precision NULL,
-  latest_year integer,
-  coal_deadline integer,
-  clean_deadline integer
-);--
-
 CREATE TABLE data_def_parameter (
   data_def_id INTEGER NOT NULL,
   data_def_par_id_auto SERIAL NOT NULL,
@@ -802,4 +778,23 @@ CREATE TABLE cli_metadata (
   metadata_title VARCHAR(200) NULL,
   metadata_value VARCHAR(200) NULL,
   metadata_date_added timestamp with time zone NULL
+);--
+
+CREATE TABLE country (
+  ctr_id_auto SERIAL NOT NULL,
+  ctr_name VARCHAR(120) NOT NULL,
+  ctr_name_show VARCHAR(120) NOT NULL,
+  ctr_code_2 VARCHAR(2) NULL,
+  ctr_code_3 VARCHAR(3) NULL,
+  ctr_data_date_max timestamp without time zone NULL,
+  ctr_data_date_min timestamp without time zone NULL
+);--
+
+CREATE TABLE ctr_data (
+  ctr_id INTEGER NOT NULL,
+  data_date timestamp without time zone NOT NULL,
+  data_type_id INTEGER NOT NULL,
+  data_pro_id INTEGER NULL,
+  data_value double precision NULL,
+  data_date_added timestamp with time zone NULL
 );--

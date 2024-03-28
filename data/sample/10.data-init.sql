@@ -74,6 +74,8 @@ INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_PRECIPITATION', 507);--
 
 
+INSERT INTO data_type (data_type_name, data_type_id) VALUES ('COUNTRY_EMISSIONS_INTENSITY_GCO2_PER_KWH', 901);--
+
 insert into stat_type (stat_type_name, stat_type_id) values ('COMMON_TIME_BASED_AVAILABILITY', 101);--
 insert into stat_type (stat_type_name, stat_type_id) values ('COMMON_CAPACITY_FACTOR', 102);--
 insert into stat_type (stat_type_name, stat_type_id) values ('COMMON_MWH_GENERATED_FOR_PERIOD', 103);--
@@ -194,3 +196,239 @@ insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_defau
 insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertTimeBasedAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '011');--
 insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('language', 'otherSettings', 'language', 'language', 'EN', null, null, '101');
 
+
+
+
+
+
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ARUBA','Aruba','AW','ABW');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AFGHANISTAN','Afghanistan','AF','AFG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ANGOLA','Angola','AO','AGO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ANGUILLA','Anguilla','AI','AIA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ALBANIA','Albania','AL','ALB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ANDORRA','Andorra','AD','AND');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NETHERLANDS ANTILLES','Netherlands Antilles','AN','ANT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UNITED ARAB EMIRATES','United Arab Emirates','AE','ARE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ARGENTINA','Argentina','AR','ARG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ARMENIA','Armenia','AM','ARM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AMERICAN SAMOA','American Samoa','AS','ASM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ANTIGUA AND BARBUDA','Antigua and Barbuda','AG','ATG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AUSTRALIA','Australia','AU','AUS');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AUSTRIA','Austria','AT','AUT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AZERBAIJAN','Azerbaijan','AZ','AZE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BURUNDI','Burundi','BI','BDI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BELGIUM','Belgium','BE','BEL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BENIN','Benin','BJ','BEN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BURKINA FASO','Burkina Faso','BF','BFA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BANGLADESH','Bangladesh','BD','BGD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BULGARIA','Bulgaria','BG','BGR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BAHRAIN','Bahrain','BH','BHR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BAHAMAS','Bahamas','BS','BHS');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BOSNIA AND HERZEGOVINA','Bosnia and Herzegovina','BA','BIH');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BELARUS','Belarus','BY','BLR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BELIZE','Belize','BZ','BLZ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BERMUDA','Bermuda','BM','BMU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BOLIVIA','Bolivia','BO','BOL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BRAZIL','Brazil','BR','BRA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BARBADOS','Barbados','BB','BRB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BRUNEI DARUSSALAM','Brunei Darussalam','BN','BRN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BHUTAN','Bhutan','BT','BTN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('BOTSWANA','Botswana','BW','BWA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CENTRAL AFRICAN REPUBLIC','Central African Republic','CF','CAF');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CANADA','Canada','CA','CAN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SWITZERLAND','Switzerland','CH','CHE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CHILE','Chile','CL','CHL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CHINA','China','CN','CHN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('COTE DIVOIRE','Cote DIvoire','CI','CIV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CAMEROON','Cameroon','CM','CMR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CONGO, THE DEMOCRATIC REPUBLIC OF THE','Congo, the Democratic Republic of the','CD','COD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CONGO','Congo','CG','COG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('COOK ISLANDS','Cook Islands','CK','COK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('COLOMBIA','Colombia','CO','COL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('COMOROS','Comoros','KM','COM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CAPE VERDE','Cape Verde','CV','CPV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('COSTA RICA','Costa Rica','CR','CRI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CUBA','Cuba','CU','CUB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CAYMAN ISLANDS','Cayman Islands','KY','CYM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CYPRUS','Cyprus','CY','CYP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CZECH REPUBLIC','Czech Republic','CZ','CZE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GERMANY','Germany','DE','DEU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('DJIBOUTI','Djibouti','DJ','DJI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('DOMINICA','Dominica','DM','DMA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('DENMARK','Denmark','DK','DNK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('DOMINICAN REPUBLIC','Dominican Republic','DO','DOM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ALGERIA','Algeria','DZ','DZA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ECUADOR','Ecuador','EC','ECU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('EGYPT','Egypt','EG','EGY');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ERITREA','Eritrea','ER','ERI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('WESTERN SAHARA','Western Sahara','EH','ESH');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SPAIN','Spain','ES','ESP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ESTONIA','Estonia','EE','EST');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ETHIOPIA','Ethiopia','ET','ETH');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FINLAND','Finland','FI','FIN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FIJI','Fiji','FJ','FJI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FRANCE','France','FR','FRA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FAROE ISLANDS','Faroe Islands','FO','FRO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MICRONESIA, FEDERATED STATES OF','Micronesia, Federated States of','FM','FSM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GABON','Gabon','GA','GAB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UNITED KINGDOM','United Kingdom','GB','GBR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GEORGIA','Georgia','GE','GEO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GHANA','Ghana','GH','GHA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GIBRALTAR','Gibraltar','GI','GIB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUINEA','Guinea','GN','GIN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUADELOUPE','Guadeloupe','GP','GLP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GAMBIA','Gambia','GM','GMB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUINEA-BISSAU','Guinea-Bissau','GW','GNB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('EQUATORIAL GUINEA','Equatorial Guinea','GQ','GNQ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GREECE','Greece','GR','GRC');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GRENADA','Grenada','GD','GRD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GREENLAND','Greenland','GL','GRL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUATEMALA','Guatemala','GT','GTM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FRENCH GUIANA','French Guiana','GF','GUF');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUAM','Guam','GU','GUM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('GUYANA','Guyana','GY','GUY');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('HONG KONG','Hong Kong','HK','HKG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('HONDURAS','Honduras','HN','HND');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CROATIA','Croatia','HR','HRV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('HAITI','Haiti','HT','HTI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('HUNGARY','Hungary','HU','HUN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('INDONESIA','Indonesia','ID','IDN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('INDIA','India','IN','IND');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('IRELAND','Ireland','IE','IRL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('IRAN, ISLAMIC REPUBLIC OF','Iran, Islamic Republic of','IR','IRN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('IRAQ','Iraq','IQ','IRQ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ICELAND','Iceland','IS','ISL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ISRAEL','Israel','IL','ISR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ITALY','Italy','IT','ITA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('JAMAICA','Jamaica','JM','JAM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('JORDAN','Jordan','JO','JOR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('JAPAN','Japan','JP','JPN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KAZAKHSTAN','Kazakhstan','KZ','KAZ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KENYA','Kenya','KE','KEN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KYRGYZSTAN','Kyrgyzstan','KG','KGZ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CAMBODIA','Cambodia','KH','KHM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KIRIBATI','Kiribati','KI','KIR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAINT KITTS AND NEVIS','Saint Kitts and Nevis','KN','KNA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KOREA, REPUBLIC OF','Korea, Republic of','KR','KOR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KUWAIT','Kuwait','KW','KWT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LAO PEOPLES DEMOCRATIC REPUBLIC','Lao Peoples Democratic Republic','LA','LAO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LEBANON','Lebanon','LB','LBN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LIBERIA','Liberia','LR','LBR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LIBYAN ARAB JAMAHIRIYA','Libyan Arab Jamahiriya','LY','LBY');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAINT LUCIA','Saint Lucia','LC','LCA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LIECHTENSTEIN','Liechtenstein','LI','LIE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SRI LANKA','Sri Lanka','LK','LKA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LESOTHO','Lesotho','LS','LSO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LITHUANIA','Lithuania','LT','LTU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LUXEMBOURG','Luxembourg','LU','LUX');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('LATVIA','Latvia','LV','LVA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MACAO','Macao','MO','MAC');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MOROCCO','Morocco','MA','MAR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MONACO','Monaco','MC','MCO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MOLDOVA, REPUBLIC OF','Moldova, Republic of','MD','MDA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MADAGASCAR','Madagascar','MG','MDG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MALDIVES','Maldives','MV','MDV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MEXICO','Mexico','MX','MEX');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MARSHALL ISLANDS','Marshall Islands','MH','MHL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF','Macedonia, the Former Yugoslav Republic of','MK','MKD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MALI','Mali','ML','MLI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MALTA','Malta','MT','MLT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MYANMAR','Myanmar','MM','MMR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MONGOLIA','Mongolia','MN','MNG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NORTHERN MARIANA ISLANDS','Northern Mariana Islands','MP','MNP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MOZAMBIQUE','Mozambique','MZ','MOZ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MAURITANIA','Mauritania','MR','MRT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MONTSERRAT','Montserrat','MS','MSR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MARTINIQUE','Martinique','MQ','MTQ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MAURITIUS','Mauritius','MU','MUS');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MALAWI','Malawi','MW','MWI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MALAYSIA','Malaysia','MY','MYS');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NAMIBIA','Namibia','NA','NAM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NEW CALEDONIA','New Caledonia','NC','NCL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NIGER','Niger','NE','NER');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NORFOLK ISLAND','Norfolk Island','NF','NFK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NIGERIA','Nigeria','NG','NGA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NICARAGUA','Nicaragua','NI','NIC');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NIUE','Niue','NU','NIU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NETHERLANDS','Netherlands','NL','NLD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NORWAY','Norway','NO','NOR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NEPAL','Nepal','NP','NPL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NAURU','Nauru','NR','NRU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('NEW ZEALAND','New Zealand','NZ','NZL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('OMAN','Oman','OM','OMN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PAKISTAN','Pakistan','PK','PAK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PANAMA','Panama','PA','PAN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PITCAIRN','Pitcairn','PN','PCN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PERU','Peru','PE','PER');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PHILIPPINES','Philippines','PH','PHL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PALAU','Palau','PW','PLW');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PAPUA NEW GUINEA','Papua New Guinea','PG','PNG');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('POLAND','Poland','PL','POL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PUERTO RICO','Puerto Rico','PR','PRI');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KOREA, DEMOCRATIC PEOPLES REPUBLIC OF','Korea, Democratic Peoples Republic of','KP','PRK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PORTUGAL','Portugal','PT','PRT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PARAGUAY','Paraguay','PY','PRY');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FRENCH POLYNESIA','French Polynesia','PF','PYF');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('QATAR','Qatar','QA','QAT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('REUNION','Reunion','RE','REU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ROMANIA','Romania','RO','ROU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('RUSSIAN FEDERATION','Russian Federation','RU','RUS');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('RWANDA','Rwanda','RW','RWA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAUDI ARABIA','Saudi Arabia','SA','SAU');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SUDAN','Sudan','SD','SDN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SENEGAL','Senegal','SN','SEN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SINGAPORE','Singapore','SG','SGP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAINT HELENA','Saint Helena','SH','SHN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SVALBARD AND JAN MAYEN','Svalbard and Jan Mayen','SJ','SJM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SOLOMON ISLANDS','Solomon Islands','SB','SLB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SIERRA LEONE','Sierra Leone','SL','SLE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('EL SALVADOR','El Salvador','SV','SLV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAN MARINO','San Marino','SM','SMR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SOMALIA','Somalia','SO','SOM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAINT PIERRE AND MIQUELON','Saint Pierre and Miquelon','PM','SPM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAO TOME AND PRINCIPE','Sao Tome and Principe','ST','STP');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SURINAME','Suriname','SR','SUR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SLOVAKIA','Slovakia','SK','SVK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SLOVENIA','Slovenia','SI','SVN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SWEDEN','Sweden','SE','SWE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SWAZILAND','Swaziland','SZ','SWZ');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SEYCHELLES','Seychelles','SC','SYC');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SYRIAN ARAB REPUBLIC','Syrian Arab Republic','SY','SYR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TURKS AND CAICOS ISLANDS','Turks and Caicos Islands','TC','TCA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('CHAD','Chad','TD','TCD');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TOGO','Togo','TG','TGO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('THAILAND','Thailand','TH','THA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TAJIKISTAN','Tajikistan','TJ','TJK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TOKELAU','Tokelau','TK','TKL');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TURKMENISTAN','Turkmenistan','TM','TKM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TONGA','Tonga','TO','TON');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TRINIDAD AND TOBAGO','Trinidad and Tobago','TT','TTO');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TUNISIA','Tunisia','TN','TUN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TURKEY','Turkey','TR','TUR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TUVALU','Tuvalu','TV','TUV');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TAIWAN, PROVINCE OF CHINA','Taiwan, Province of China','TW','TWN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('TANZANIA, UNITED REPUBLIC OF','Tanzania, United Republic of','TZ','TZA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UGANDA','Uganda','UG','UGA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UKRAINE','Ukraine','UA','UKR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('URUGUAY','Uruguay','UY','URY');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UNITED STATES','United States','US','USA');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('UZBEKISTAN','Uzbekistan','UZ','UZB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAINT VINCENT AND THE GRENADINES','Saint Vincent and the Grenadines','VC','VCT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('VENEZUELA','Venezuela','VE','VEN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('VIRGIN ISLANDS, BRITISH','Virgin Islands, British','VG','VGB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('VIRGIN ISLANDS, U.S.','Virgin Islands, U.s.','VI','VIR');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('VIET NAM','Viet Nam','VN','VNM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('VANUATU','Vanuatu','VU','VUT');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('WALLIS AND FUTUNA','Wallis and Futuna','WF','WLF');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SAMOA','Samoa','WS','WSM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('YEMEN','Yemen','YE','YEM');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SOUTH AFRICA','South Africa','ZA','ZAF');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ZAMBIA','Zambia','ZM','ZMB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ZIMBABWE','Zimbabwe','ZW','ZWE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('FALKLAND ISLANDS (MALVINAS)','Falkland Islands (Malvinas)','FK','FLK');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SUDAN','Sudan','SD','SDN');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SERBIA','Serbia','RS','SRB');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('MONTENEGRO','Montenegro','ME','MNE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PALESTINAN','Palestina','PS','PSE');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KOSOVO','Kosovo','XK','XKX');--
+insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SOUTH SUDAN','South Sudan','SS','SSD');--
