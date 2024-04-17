@@ -116,6 +116,10 @@ insert into stat_definition (stat_def_name, stat_def_description, stat_def_execu
 --insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Prediction calculation', 'Calcula las predicciones según modelo de Idatha', 'tech.renovus.solarec.business.impl.calculation.PredictionModel', null, 2);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Power curve (Solar)', 'Curva de potencia mostrando los puntos de potencia solar', 'tech.renovus.solarec.business.impl.chart.solar.PowerCurve', null, 1);--
 
+insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Emissions CO2', 'Information regarding CO2 emissions in a country in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.EmissionsCo2', null, 1);--
+insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates sales', 'Information regarding the sales of certificates for a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.CertificatesSales', null, 1);--
+insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates', 'Information regarding the certificates of a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.Certificates', null, 1);--
+
 
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('DAILY', 'Daily', '110100', 'tech.renovus.solarec.business.impl.report.ReportDaily', 1);--
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('WEEKLY', 'Weekly', '100110', 'tech.renovus.solarec.business.impl.report.ReportWeekly', 1);--
