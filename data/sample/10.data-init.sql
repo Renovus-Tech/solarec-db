@@ -436,3 +436,21 @@ insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('M
 insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('PALESTINAN','Palestina','PS','PSE');--
 insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('KOSOVO','Kosovo','XK','XKX');--
 insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('SOUTH SUDAN','South Sudan','SS','SSD');--
+
+insert into sdg (sdg_code, sdg_name) values ('SDG 1', 'No poverty ');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 2', 'Zero hunger ');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 3', 'Good health and well-being');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 4', 'Quality education');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 5', 'Gender equality');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 6', 'Clean water and sanitation');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 7', 'Affordable and clean energy');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 8', 'Decent work and economic growth');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 9', 'Industry, innovation and infrastructure');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 10', 'Reduced inequalities');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 11', 'Sustainable cities and communities');-- 
+insert into sdg (sdg_code, sdg_name) values ('SDG 12', 'Responsible consumption and production');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 13', 'Climate action ');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 14', 'Life below water');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 15', 'Life on land');--
+insert into sdg (sdg_code, sdg_name) values ('SDG 16', 'Peace, justice, and strong institutions');-- 
+insert into sdg (sdg_code, sdg_name) values ('SDG 17', 'Partnerships for the goals');--

@@ -97,3 +97,33 @@ SELECT g.cli_id, g.gen_id_auto as gen_id, ddp.*, gddp.data_def_par_id, gddp.gen_
 generator g
 JOIN data_def_parameter ddp ON g.data_def_id = ddp.data_def_id
 LEFT JOIN gen_data_def_parameter gddp ON g.cli_id = gddp.cli_id  AND g.gen_id_auto = gddp.gen_id AND ddp.data_def_id = gddp.data_def_id AND ddp.data_def_par_id_auto = gddp.data_def_par_id;--
+
+
+CREATE VIEW vw_cli_gen_alert_to_send_by_email AS
+select
+ cga.*,
+ g.loc_id,
+ g.gen_name,
+ g.gen_code,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join generator g on g.cli_id = l.cli_id and g.loc_id = l.loc_id_auto
+join cli_gen_alert cga on l.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id
+where c.cli_flags ilike '__1%' and g.gen_flags ilike '_1%' and cga.cli_gen_alert_flags ilike '_0%';--
+
+
+CREATE VIEW vw_cli_loc_alert_to_send_by_email AS 
+select
+ cla.*,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join cli_loc_alert cla on l.cli_id = cla.cli_id and l.loc_id_auto = cla.loc_id
+where c.cli_flags ilike '__1%' and l.loc_flags ilike '_1%' and cla.cli_loc_alert_flags ilike '_0%';--

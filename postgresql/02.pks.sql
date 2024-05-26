@@ -102,3 +102,7 @@ ALTER TABLE cli_metadata ADD PRIMARY KEY(cli_id, metadata_name);--
 ALTER TABLE country ADD PRIMARY KEY (ctr_id_auto);--
 ALTER TABLE ctr_data ADD PRIMARY KEY(ctr_id, data_date, data_type_id);--                                                                                                                                                                                                                                
 
+
+ALTER TABLE sdg ADD PRIMARY KEY(sdg_id_auto);--                                                                                                                                                                                                                                                               
+
+ALTER TABLE loc_sdg ADD PRIMARY KEY (cli_id, loc_id, sdg_id);--

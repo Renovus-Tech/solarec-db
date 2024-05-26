@@ -798,3 +798,16 @@ CREATE TABLE ctr_data (
   data_value double precision NULL,
   data_date_added timestamp with time zone NULL
 );--
+
+CREATE TABLE sdg (
+   sdg_id_auto SERIAL NOT NULL,
+   sdg_code VARCHAR(10) NOT NULL,
+   sdg_name VARCHAR(255) NOT NULL
+);--
+
+CREATE TABLE loc_sdg (
+  cli_id INTEGER NOT NULL,
+  loc_id INTEGER NOT NULL,
+  sdg_id INTEGER NOT NULL,
+  loc_sdg_description VARCHAR(1000)
+);--

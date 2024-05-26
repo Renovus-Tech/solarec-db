@@ -157,3 +157,7 @@ ALTER TABLE ctr_data ADD CONSTRAINT fk_ctr_data__data_processing FOREIGN KEY(dat
 ALTER TABLE ctr_data ADD CONSTRAINT fk_ctr_data__data_type FOREIGN KEY(data_type_id) REFERENCES data_type(data_type_id);--
 
 ALTER TABLE location ADD CONSTRAINT fk_loc__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--
+
+
+ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);--
+ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__sdg FOREIGN KEY(sdg_id) REFERENCES sdg(sdg_id_auto);--

@@ -514,3 +514,53 @@ insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('K
 
 ALTER TABLE location DROP COLUMN loc_country;--
 ALTER TABLE location DROP COLUMN loc_country_alpha_2;--
+
+CREATE TABLE sdg (
+   sdg_id_auto SERIAL NOT NULL,
+   sdg_code VARCHAR(10) NOT NULL,
+   sdg_name VARCHAR(255) NOT NULL
+);--
+
+ALTER TABLE sdg ADD PRIMARY KEY(sdg_id_auto);--
+
+CREATE TABLE loc_sdg (
+  cli_id INTEGER NOT NULL,
+  loc_id INTEGER NOT NULL,
+  sdg_id INTEGER NOT NULL,
+  loc_sdg_description VARCHAR(1000)
+);--
+ALTER TABLE loc_sdg ADD PRIMARY KEY (cli_id, loc_id, sdg_id);--
+
+ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);--
+ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__sdg FOREIGN KEY(sdg_id) REFERENCES sdg(sdg_id_auto);--
+
+
+CREATE VIEW vw_cli_gen_alert_to_send_by_email AS
+select
+ cga.*,
+ g.loc_id,
+ g.gen_name,
+ g.gen_code,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join generator g on g.cli_id = l.cli_id and g.loc_id = l.loc_id_auto
+join cli_gen_alert cga on l.cli_id = cga.cli_id and g.gen_id_auto = cga.gen_id
+where c.cli_flags ilike '__1%' and g.gen_flags ilike '_1%' and cga.cli_gen_alert_flags ilike '_0%';--
+
+
+CREATE VIEW vw_cli_loc_alert_to_send_by_email AS 
+select
+ cla.*,
+ l.loc_name,
+ l.loc_code,
+ c.cli_name
+from
+client c
+join location l on c.cli_id_auto = l.cli_id
+join cli_loc_alert cla on l.cli_id = cla.cli_id and l.loc_id_auto = cla.loc_id
+where c.cli_flags ilike '__1%' and l.loc_flags ilike '_1%' and cla.cli_loc_alert_flags ilike '_0%';--
+
