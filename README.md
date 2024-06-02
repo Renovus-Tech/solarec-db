@@ -1,3 +1,5 @@
+[![CLA assistant](https://cla-assistant.io/readme/badge/Renovus-Tech/solarec-db)](https://cla-assistant.io/Renovus-Tech/solarec-db)
+
 # Solarec - Database - Repository
 The repository contains the different SQL's files required to create and populate a Solarec Database. For each database engine supported a folder will exists. At the **data** folder, a few samples files will exists to with different types of samples.
 
