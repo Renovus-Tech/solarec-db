@@ -106,3 +106,5 @@ ALTER TABLE ctr_data ADD PRIMARY KEY(ctr_id, data_date, data_type_id);--
 ALTER TABLE sdg ADD PRIMARY KEY(sdg_id_auto);--                                                                                                                                                                                                                                                               
 
 ALTER TABLE loc_sdg ADD PRIMARY KEY (cli_id, loc_id, sdg_id);--
+
+ALTER TABLE loc_type ADD PRIMARY KEY(loc_type_id_auto);--

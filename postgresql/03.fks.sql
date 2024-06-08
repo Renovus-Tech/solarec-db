@@ -161,3 +161,5 @@ ALTER TABLE location ADD CONSTRAINT fk_loc__country FOREIGN KEY(ctr_id) REFERENC
 
 ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__location FOREIGN KEY(cli_id, loc_id) REFERENCES location(cli_id, loc_id_auto);--
 ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__sdg FOREIGN KEY(sdg_id) REFERENCES sdg(sdg_id_auto);--
+
+ALTER TABLE location ADD CONSTRAINT fk_loc__loc_type FOREIGN KEY(loc_type_id) REFERENCES loc_type(loc_type_id_auto);--

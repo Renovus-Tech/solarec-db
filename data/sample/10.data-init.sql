@@ -454,3 +454,8 @@ insert into sdg (sdg_code, sdg_name) values ('SDG 14', 'Life below water');--
 insert into sdg (sdg_code, sdg_name) values ('SDG 15', 'Life on land');--
 insert into sdg (sdg_code, sdg_name) values ('SDG 16', 'Peace, justice, and strong institutions');-- 
 insert into sdg (sdg_code, sdg_name) values ('SDG 17', 'Partnerships for the goals');--
+
+insert into loc_type (loc_type_code, loc_type_text) values ('RES', 'Residential');--
+insert into loc_type (loc_type_code, loc_type_text) values ('IND', 'Industrial');--
+insert into loc_type (loc_type_code, loc_type_text) values ('RURAL', 'Rural');--
+insert into loc_type (loc_type_code, loc_type_text) values ('COMM_EST', 'Commercial establishment');--

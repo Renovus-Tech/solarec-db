@@ -564,3 +564,20 @@ join location l on c.cli_id_auto = l.cli_id
 join cli_loc_alert cla on l.cli_id = cla.cli_id and l.loc_id_auto = cla.loc_id
 where c.cli_flags ilike '__1%' and l.loc_flags ilike '_1%' and cla.cli_loc_alert_flags ilike '_0%';--
 
+
+
+CREATE TABLE loc_type (
+  loc_type_id_auto  SERIAL NOT NULL,
+  loc_type_code VARCHAR(255),
+  loc_type_text VARCHAR(255)
+);--
+
+ALTER TABLE loc_type ADD PRIMARY KEY(loc_type_id_auto);--
+
+ALTER TABLE location ADD COLUMN loc_type_id INTEGER NULL;--
+ALTER TABLE location ADD CONSTRAINT fk_loc__loc_type FOREIGN KEY(loc_type_id) REFERENCES loc_type(loc_type_id_auto);--
+
+insert into loc_type (loc_type_code, loc_type_text) values ('RES', 'Residential');--
+insert into loc_type (loc_type_code, loc_type_text) values ('IND', 'Industrial');--
+insert into loc_type (loc_type_code, loc_type_text) values ('RURAL', 'Rural');--
+insert into loc_type (loc_type_code, loc_type_text) values ('COMM_EST', 'Commercial establishment');--

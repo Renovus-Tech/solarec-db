@@ -167,7 +167,8 @@ CREATE TABLE location (
   loc_type varchar(50) NULL,
   loc_gmt VARCHAR(8) NULL,
   loc_demo_date timestamp without time zone,
-  ctr_id INTEGER NULL
+  ctr_id INTEGER NULL,
+  loc_type_id INTEGER NULL
 );--
 
 CREATE TABLE loc_user (
@@ -810,4 +811,11 @@ CREATE TABLE loc_sdg (
   loc_id INTEGER NOT NULL,
   sdg_id INTEGER NOT NULL,
   loc_sdg_description VARCHAR(1000)
+);--
+
+
+CREATE TABLE loc_type (
+  loc_type_id_auto  SERIAL NOT NULL,
+  loc_type_code VARCHAR(255),
+  loc_type_text VARCHAR(255)
 );--
