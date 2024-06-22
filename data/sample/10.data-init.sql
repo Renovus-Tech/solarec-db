@@ -5,61 +5,6 @@ INSERT INTO data_category (data_cat_name) VALUES ('Service');--
 INSERT INTO data_category (data_cat_name) VALUES ('Utility');--
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('INVALID', -1);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_OK_SECONDS', 203);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_ERROR_CODE', 204);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_POWER_KWH', 205);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_DIRECTION_DEGREE', 206);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_PITCH', 207);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_1_EXPECTED_PRODUCTION_WTG_DATA_NO_AIRDENSITY', 208);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_1_PRICE_INDEX', 209);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_RPM_AVG', 210);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_BEARING_TEMP_AVG', 211);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_PHASE1_TEMP_AVG', 212);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_PHASE2_TEMP_AVG', 213);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_PHASE3_TEMP_AVG', 214);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_BEARING2_TEMP_AVG', 215);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GENERATOR_COOLINGWATER_TEMP_AVG', 216);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_HYDRAULIC_OIL_TEMP_AVG', 217);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_HYDRAULIC_OIL_PRESSURE_AVG', 218);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GEAR_BEARING_TEMP_AVG', 219);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GEAR_BEARING_TEMPB_AVG', 220);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GEAR_BEARING_TEMPC_AVG', 221);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GEAR_OIL_TEMPINLET_AVG', 222);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GEAR_MAINTANK_OILTEMP_AVG', 223);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_NACELLE_TEMP_AVG', 224);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_ROTOR_RPM_AVG', 225);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_ROTOR_RPM2_AVG', 226);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_AMBIENT_TEMP_AVG', 227);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GRID_PRODUCTION_REACTIVEPOWER_AVG', 233);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GRID_PRODUCTION_POSSIBLEPOWER_AVG', 234);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_ACTIVE_POWER_LIMIT', 235);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_GRID_PRODUCTION_POWER_INTERNALDERATESTATE', 236);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_CONTROLLER_GROUND_TEMP_AVG', 237);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_CONTROLLER_TOP_TEMP_AVG', 238);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_CONTROLLER_HUB_TEMP_AVG', 239);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEA_LOAD', 240);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEB_LOAD', 241);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEC_LOAD', 242);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEA_BLPITCHANGLE_AVG', 243);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEB_BLPITCHANGLE_AVG', 244);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_BLADEC_BLPITCHANGLE_AVG', 245);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_TILTYAWCONTROL_AMPLTILT_AVG', 246);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_BLADES_TILTYAWCONTROL_AMPLYAW_AVG', 247);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_HVTRAFO_PHASE1_TEMP_AVG', 248);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_HVTRAFO_PHASE2_TEMP_AVG', 249);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_HVTRAFO_PHASE3_TEMP_AVG', 250);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_YAWYAWCONTROLYAWCONTROLAUTOYAWACTIVE', 251);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_AMB_LAPM_ACTSECTORINPERIOD', 252);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_AMB_LAPM_SECTORTIMEINPERIOD', 253);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('GENERATOR_AMB_LAPM_PARTIALLOADMODEINPERIOD', 255);--
-
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_TEMPERATURE', 303);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_PRESSURE', 304);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_HUMIDITY', 305);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_TEMPERATURE_METEO', 393);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_PRESSURE_METEO', 394);--
-INSERT INTO data_type (data_type_name, data_type_id) VALUES ('STATION_HUMIDITY_METEO', 395);--
-
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('LOCATION_OUTPUT_CAPACITY', 401);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('LOCATION_POWER_KWH', 402);--
@@ -72,7 +17,6 @@ INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_MODULE_TEMPE
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_IRRADIATION', 505);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_TOTAL_CLOUD_COVER', 506);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_PRECIPITATION', 507);--
-
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('COUNTRY_EMISSIONS_INTENSITY_GCO2_PER_KWH', 901);--
 
@@ -87,45 +31,19 @@ insert into stat_type (stat_type_name, stat_type_id) values ('GENERATOR_OPERATIO
 insert into stat_type (stat_type_name, stat_type_id) values ('GENERATOR_PERFORMANCE_INDEX', 403);--
 insert into stat_type (stat_type_name, stat_type_id) values ('GENERATOR_PERFORMANCE_MWH', 404);--
 
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Overview', 'Mostrar KPIs: capacity factor (%), Time-based availability (%), Average Wind Speed (m/s), MWh generated for period.', 'tech.renovus.solarec.business.impl.chart.OverviewChart', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Power curve', 'Curva de potencia mostrando los puntos y también una línea con la curva de potencia de referencia', 'tech.renovus.solarec.business.impl.chart.PowerCurve', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Performance Index', 'Indice de performance (100% = Esperado) y su evolución en el tiempo. Ejemplo gráfica de abajo, solo línea negra', 'tech.renovus.solarec.business.impl.chart.PerformanceIndex', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Data availability', 'Gráfica que muestre por semana, con formato condicional (Verde =97% a 100%, Amarillo 90% a 97%, Naranja 80% a 90%, Rojo 79% a 0%) la disponibilidad de datos recibidos del SCADA.', 'tech.renovus.solarec.business.impl.chart.DataAvailability', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Climate', 'Condiciones climáticas para período seleccionado.', 'tech.renovus.solarec.business.impl.chart.Climate', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Alarms', 'Estas surgen del SCADA cada 10 minutos, se emiten con un código numérico', 'tech.renovus.solarec.business.impl.chart.Alarms', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Curtailments', 'Graficar si hubo "curtailments" (limitaciones de potencia) para determinado período', 'tech.renovus.solarec.business.impl.chart.Curtailments', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Curtailment calculation', 'Calcula los curtailments de los generadores en base a los nuevos datos cargados.', 'tech.renovus.solarec.business.impl.calculation.Curtailments', null, 2);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Expected Energy calculation', 'Calcula el expected energy de los generadores en base a los nuevos datos cargados.', 'tech.renovus.solarec.business.impl.calculation.ExpectedEnergy', null, 2);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Stopped Generators', 'Información sobre el tiempo que estuvo parado un generador', 'tech.renovus.solarec.business.impl.chart.Stopped', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Power vs RPM', 'Información sobre potencia generada vs RPM de un generador', 'tech.renovus.solarec.business.impl.chart.PowerRpm', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Pitch vs Windspeed', 'Información sobre pitch vs windspeed', 'tech.renovus.solarec.business.impl.chart.PitchWindspeed', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Alarms Generator', 'Información de los códigos de alarma de cada generador, según se van generando.', 'tech.renovus.solarec.business.impl.chart.AlarmsGenerator', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Wind Measurements', 'Información de las medidas de viento de un generador.', 'tech.renovus.solarec.business.impl.chart.WindMeasurements', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Nacelle Deviation', 'Información de las desviación del nacele un generador.', 'tech.renovus.solarec.business.impl.chart.NacelleDeviation', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Wind Rose', 'Información de del viento en modalidad wind rose.', 'tech.renovus.solarec.business.impl.chart.WindRose', null, 1);--
---
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Budget', 'Información sobre el budget de los parques.', 'tech.renovus.solarec.business.impl.chart.Budget', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Budget Cumulative', 'Información sobre el budget acumulado de los parques.', 'tech.renovus.solarec.business.impl.chart.BudgetCumulative', null, 1);--
---
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Alarms V2', 'Estas surgen del SCADA cada 10 minutos, se emiten con un código numérico', 'tech.renovus.solarec.business.impl.chart.AlarmsV2', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Availability', 'Gráfica que muestre por semana mostrando Availability and Losses.', 'tech.renovus.solarec.business.impl.chart.Availability', null, 1);--
-
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Overview solar', 'Mostrar KPIs: totalProduction, totalIrradiation, avgAmbientTemp, avgModuleTemp, timeBasedAvailability, specificYield, performanceRatio for period.', 'tech.renovus.solarec.business.impl.chart.solar.OverviewChart', null, 1);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Performance Index solar', 'Indice de performance (100% = Esperado) y su evolución en el tiempo. Ejemplo gráfica de abajo, solo línea negra', 'tech.renovus.solarec.business.impl.chart.solar.PerformanceIndex', null, 1);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Climate solar', 'Condiciones climáticas para período seleccionado.', 'tech.renovus.solarec.business.impl.chart.solar.Climate', null, 1);--
---insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Prediction calculation', 'Calcula las predicciones según modelo de Idatha', 'tech.renovus.solarec.business.impl.calculation.PredictionModel', null, 2);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Power curve (Solar)', 'Curva de potencia mostrando los puntos de potencia solar', 'tech.renovus.solarec.business.impl.chart.solar.PowerCurve', null, 1);--
 
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Emissions CO2', 'Information regarding CO2 emissions in a country in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.EmissionsCo2', null, 1);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates sales', 'Information regarding the sales of certificates for a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.CertificatesSales', null, 1);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates', 'Information regarding the certificates of a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.Certificates', null, 1);--
 
-
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('DAILY', 'Daily', '110100', 'tech.renovus.solarec.business.impl.report.ReportDaily', 1);--
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('WEEKLY', 'Weekly', '100110', 'tech.renovus.solarec.business.impl.report.ReportWeekly', 1);--
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('MONTHLY', 'Monthly', '100101', 'tech.renovus.solarec.business.impl.report.ReportMonthly', 1);--
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('FORECAST', 'Weather Forecast', '110100', 'tech.renovus.solarec.business.impl.report.ReportForecast', 1);--
-
 
 INSERT INTO profile (prf_name,prf_description,prf_flags) VALUES ('Administrador','',null);-- 1
 INSERT INTO profile (prf_name,prf_description,prf_flags) VALUES ('Usuario','',null);-- 2
@@ -199,11 +117,6 @@ insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_defau
 insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertNegativeChangeExceeding', 'alerts', 'number', '%', '6', '0', '100', '011');--
 insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('alertTimeBasedAvailabilityLowerThan', 'alerts', 'number', '%', '90', '0', '100', '011');--
 insert into settings(set_name, set_cat_name, set_type, set_unit, set_value_default, set_value_min, set_value_max, set_flags) values ('language', 'otherSettings', 'language', 'language', 'EN', null, null, '101');
-
-
-
-
-
 
 insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('ARUBA','Aruba','AW','ABW');--
 insert into country (ctr_name, ctr_name_show, ctr_code_2, ctr_code_3) values ('AFGHANISTAN','Afghanistan','AF','AFG');--
