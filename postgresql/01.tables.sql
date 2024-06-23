@@ -760,7 +760,7 @@ CREATE TABLE loc_data_def_parameter (
   loc_id INTEGER NOT NULL,
   data_def_id INTEGER NOT NULL,
   data_def_par_id INTEGER NOT NULL,
-  cli_data_def_par_value VARCHAR(255) NOT NULL
+  loc_data_def_par_value VARCHAR(255) NOT NULL
 );--
 
 
@@ -769,7 +769,7 @@ CREATE TABLE gen_data_def_parameter (
   gen_id INTEGER NOT NULL,
   data_def_id INTEGER NOT NULL,
   data_def_par_id INTEGER NOT NULL,
-  cli_data_def_par_value VARCHAR(255) NOT NULL
+  gen_data_def_par_value VARCHAR(255) NOT NULL
 );--
 
 
