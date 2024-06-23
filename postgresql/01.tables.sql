@@ -16,7 +16,8 @@ CREATE TABLE client (
   cli_gmt VARCHAR(8) NULL,
   cli_demo_date timestamp without time zone,
   data_def_id INTEGER NULL,
-  cli_sec_code varchar(512)
+  cli_sec_code varchar(512),
+  cli_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE cli_user (
@@ -116,7 +117,8 @@ CREATE TABLE generator (
   gen_flags VARCHAR(20) NULL,
   gen_code VARCHAR(100) NULL,
   gen_data_date_max timestamp without time zone NULL,
-  gen_data_date_min timestamp without time zone NULL
+  gen_data_date_min timestamp without time zone NULL,
+  gen_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE gen_data (
@@ -168,7 +170,8 @@ CREATE TABLE location (
   loc_gmt VARCHAR(8) NULL,
   loc_demo_date timestamp without time zone,
   ctr_id INTEGER NULL,
-  loc_type_id INTEGER NULL
+  loc_type_id INTEGER NULL,
+  loc_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE loc_user (
@@ -254,7 +257,8 @@ CREATE TABLE station (
   sta_flags VARCHAR(20) NULL,
   sta_code VARCHAR(100) NULL,
   sta_data_date_max timestamp without time zone NULL,
-  sta_data_date_min timestamp without time zone NULL
+  sta_data_date_min timestamp without time zone NULL,
+  sta_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE stat_definition (
@@ -334,7 +338,8 @@ CREATE TABLE users (
   usr_date_locked timestamp with time zone NULL,
   usr_comments VARCHAR(500) NULL,
   usr_pwd_reset_requested timestamp with time zone NULL,
-  usr_pwd_reset_uuid VARCHAR(500) NULL
+  usr_pwd_reset_uuid VARCHAR(500) NULL,
+  usr_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE usr_profile (

@@ -581,3 +581,31 @@ insert into loc_type (loc_type_code, loc_type_text) values ('RES', 'Residential'
 insert into loc_type (loc_type_code, loc_type_text) values ('IND', 'Industrial');--
 insert into loc_type (loc_type_code, loc_type_text) values ('RURAL', 'Rural');--
 insert into loc_type (loc_type_code, loc_type_text) values ('COMM_EST', 'Commercial establishment');--
+
+
+ALTER TABLE client ADD COLUMN cli_cert_prov_data VARCHAR(2000);--
+ALTER TABLE users ADD COLUMN usr_cert_prov_data VARCHAR(2000);--
+ALTER TABLE location ADD COLUMN loc_cert_prov_data VARCHAR(2000);--
+ALTER TABLE generator ADD COLUMN gen_cert_prov_data VARCHAR(2000);--
+ALTER TABLE station ADD COLUMN sta_cert_prov_data VARCHAR(2000);--
+
+update client set cli_flags = '0001' where cli_flags is null or cli_flags = '';--
+update client set cli_flags = cli_flags || '001' where cli_flags ilike '_';--
+update client set cli_flags = cli_flags || '01' where cli_flags ilike '__';--
+update client set cli_flags = cli_flags || '1' where cli_flags ilike '___';--
+
+update users set usr_flags = '00001' where usr_flags is null or usr_flags = '';--
+update users set usr_flags = usr_flags || '0001' where usr_flags ilike '_';--
+update users set usr_flags = usr_flags || '001' where usr_flags ilike '__';--
+update users set usr_flags = usr_flags || '01' where usr_flags ilike '___';--
+update users set usr_flags = usr_flags || '1' where usr_flags ilike '____';--
+
+update location set loc_flags = '000001' where loc_flags is null or loc_flags = '';--
+update location set loc_flags = loc_flags || '00001' where loc_flags ilike '_';--
+update location set loc_flags = loc_flags || '0001' where loc_flags ilike '__';--
+update location set loc_flags = loc_flags || '001' where loc_flags ilike '___';--
+update location set loc_flags = loc_flags || '01' where loc_flags ilike '____';--
+update location set loc_flags = loc_flags || '1' where loc_flags ilike '_____';--
+
+update station set sta_flags = '01' where sta_flags is null or sta_flags = '';--
+update station set sta_flags = sta_flags || '1' where sta_flags ilike '_';--
