@@ -609,3 +609,5 @@ update location set loc_flags = loc_flags || '1' where loc_flags ilike '_____';-
 
 update station set sta_flags = '01' where sta_flags is null or sta_flags = '';--
 update station set sta_flags = sta_flags || '1' where sta_flags ilike '_';--
+
+ALTER TABLE gen_data ADD COLUMN gen_data_cert_prov_data VARCHAR(2000);--
