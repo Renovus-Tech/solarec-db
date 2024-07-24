@@ -70,6 +70,18 @@ insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.generator.device_id');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma.generator.last_retrieve');--
 
+insert into data_definition(data_def_name, data_def_description, data_def_executable, data_Def_flags)
+values ('Inverter Growatt', null, 'tech.renovus.solarec.inverters.brand.growatt.GrowattInveterService', '011');-- 5
+
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'sma.sandbox');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.test');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.client.app_token');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.client.last_retrieve');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.location.last_retrieve');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.generator.plant_id');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.generator.last_retrieve');--
+insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.data_demo');--
+
 
 
 insert into generator (cli_id, loc_id, gen_name, gen_coord_lat, gen_coord_lng, gen_brand, gen_model, gen_serial_num, gen_rate_power, gen_code, data_def_id, gen_flags)
