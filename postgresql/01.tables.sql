@@ -792,6 +792,7 @@ CREATE TABLE country (
   ctr_name_show VARCHAR(120) NOT NULL,
   ctr_code_2 VARCHAR(2) NULL,
   ctr_code_3 VARCHAR(3) NULL,
+  ctr_code_phone VARCHAR(10) NULL,
   ctr_data_date_max timestamp without time zone NULL,
   ctr_data_date_min timestamp without time zone NULL
 );--

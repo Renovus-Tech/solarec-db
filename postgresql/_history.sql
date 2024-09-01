@@ -609,3 +609,5 @@ update location set loc_flags = loc_flags || '1' where loc_flags ilike '_____';-
 
 update station set sta_flags = '01' where sta_flags is null or sta_flags = '';--
 update station set sta_flags = sta_flags || '1' where sta_flags ilike '_';--
+
+ALTER TABLE country ADD COLUMN ctr_code_phone VARCHAR(10) NULL;--
