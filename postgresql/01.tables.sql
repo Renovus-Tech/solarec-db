@@ -128,7 +128,8 @@ CREATE TABLE gen_data (
   data_type_id INTEGER NOT NULL,
   data_pro_id INTEGER NOT NULL,
   data_value double precision NULL,
-  data_date_added timestamp with time zone NULL
+  data_date_added timestamp with time zone NULL,
+  gen_data_cert_prov_data VARCHAR(2000)
 );--
 
 CREATE TABLE gen_metadata (

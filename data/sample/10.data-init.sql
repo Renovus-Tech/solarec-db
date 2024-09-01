@@ -371,6 +371,13 @@ insert into loc_type (loc_type_code, loc_type_text) values ('RURAL', 'Rural');--
 insert into loc_type (loc_type_code, loc_type_text) values ('COMM_EST', 'Commercial establishment');--
 
 
+insert into loc_type (loc_type_code, loc_type_text) values ('BUS', 'Business');--
+insert into loc_type (loc_type_code, loc_type_text) values ('NON_PRF', 'Non-profit');--
+insert into loc_type (loc_type_code, loc_type_text) values ('PUB_SEC', 'Public sector');--
+insert into loc_type (loc_type_code, loc_type_text) values ('EDU', 'Educational');--
+
+
+
 UPDATE country SET ctr_code_phone = '+297' WHERE ctr_code_3 = 'ABW';--
 UPDATE country SET ctr_code_phone = '+93' WHERE ctr_code_3 = 'AFG';--
 UPDATE country SET ctr_code_phone = '+244' WHERE ctr_code_3 = 'AGO';--
