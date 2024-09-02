@@ -614,3 +614,5 @@ ALTER TABLE gen_data ADD COLUMN gen_data_cert_prov_data VARCHAR(2000);--
 
 ALTER TABLE country ADD COLUMN ctr_code_phone VARCHAR(10) NULL;--
 
+ALTER TABLE country ADD COLUMN ctr_coord_lat double precision NULL;--
+ALTER TABLE country ADD COLUMN ctr_coord_lng double precision NULL;--
