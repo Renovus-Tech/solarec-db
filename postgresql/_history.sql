@@ -620,3 +620,5 @@ ALTER TABLE country ADD COLUMN ctr_coord_lng double precision NULL;--
 
 ALTER TABLE client ADD COLUMN ctr_id INTEGER NULL;--
 ALTER TABLE client ADD CONSTRAINT fk_cli__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--
+
+INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_AC_POWER_PREDICTION', 508);--

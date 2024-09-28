@@ -17,6 +17,7 @@ INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_MODULE_TEMPE
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_IRRADIATION', 505);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_TOTAL_CLOUD_COVER', 506);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_PRECIPITATION', 507);--
+INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_AC_POWER_PREDICTION', 508);--
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('COUNTRY_EMISSIONS_INTENSITY_GCO2_PER_KWH', 901);--
 
