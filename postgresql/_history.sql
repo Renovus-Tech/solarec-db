@@ -616,3 +616,7 @@ ALTER TABLE country ADD COLUMN ctr_code_phone VARCHAR(10) NULL;--
 
 ALTER TABLE country ADD COLUMN ctr_coord_lat double precision NULL;--
 ALTER TABLE country ADD COLUMN ctr_coord_lng double precision NULL;--
+
+
+ALTER TABLE client ADD COLUMN ctr_id INTEGER NULL;--
+ALTER TABLE client ADD CONSTRAINT fk_cli__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--

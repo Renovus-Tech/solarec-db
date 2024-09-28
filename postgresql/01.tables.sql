@@ -17,7 +17,9 @@ CREATE TABLE client (
   cli_demo_date timestamp without time zone,
   data_def_id INTEGER NULL,
   cli_sec_code varchar(512),
-  cli_cert_prov_data VARCHAR(2000)
+  cli_cert_prov_data VARCHAR(2000),
+  ctr_id INTEGER NULL
+
 );--
 
 CREATE TABLE cli_user (
