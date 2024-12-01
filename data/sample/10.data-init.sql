@@ -41,7 +41,9 @@ insert into stat_definition (stat_def_name, stat_def_description, stat_def_execu
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates sales', 'Information regarding the sales of certificates for a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.CertificatesSales', null, 1);--
 insert into stat_definition (stat_def_name, stat_def_description, stat_def_executable, stat_def_flags, stat_def_type) values ('Certificates', 'Information regarding the certificates of a client in a period of time.', 'tech.renovus.solarec.business.impl.chart.solar.Certificates', null, 1);--
 
+insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('DAILY', 'Daily', '110100', 'tech.renovus.solarec.business.impl.report.ReportDaily', 1);--
 insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('WEEKLY', 'Weekly', '100110', 'tech.renovus.solarec.business.impl.report.ReportWeekly', 1);--
+insert into rep_type (rep_type_name, rep_type_title, rep_flags, rep_executable, rep_order) values ('MONTHLY', 'Monthly', '100101', 'tech.renovus.solarec.business.impl.report.ReportMonthly', 1);--
 
 INSERT INTO profile (prf_name,prf_description,prf_flags) VALUES ('Administrador','',null);-- 1
 INSERT INTO profile (prf_name,prf_description,prf_flags) VALUES ('Usuario','',null);-- 2
