@@ -165,3 +165,8 @@ ALTER TABLE loc_sdg ADD CONSTRAINT fk_loc_sdg__sdg FOREIGN KEY(sdg_id) REFERENCE
 ALTER TABLE location ADD CONSTRAINT fk_loc__loc_type FOREIGN KEY(loc_type_id) REFERENCES loc_type(loc_type_id_auto);--
 
 ALTER TABLE client ADD CONSTRAINT fk_cli__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--
+
+
+ALTER TABLE location ADD CONSTRAINT loc__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--
+ALTER TABLE generator ADD CONSTRAINT gen__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--
+ALTER TABLE station ADD CONSTRAINT sta__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--

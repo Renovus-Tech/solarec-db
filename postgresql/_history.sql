@@ -622,3 +622,23 @@ ALTER TABLE client ADD COLUMN ctr_id INTEGER NULL;--
 ALTER TABLE client ADD CONSTRAINT fk_cli__country FOREIGN KEY(ctr_id) REFERENCES country(ctr_id_auto);--
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('SOLAR_AC_POWER_PREDICTION', 508);--
+
+
+CREATE TABLE frequency (
+  frq_id_auto SERIAL NOT NULL,
+  frq_name VARCHAR(200) NOT NULL,
+  frq_id INTEGER NOT NULL,
+  frq_unit VARCHAR(5) NOT NULL,
+  frq_flags VARCHAR(20) NULL
+);--
+
+ALTER TABLE frequency ADD PRIMARY KEY (frq_id_auto);--
+
+ALTER TABLE location ADD COLUMN frq_id INTEGER NULL;--
+ALTER TABLE generator ADD COLUMN frq_id INTEGER NULL;--
+ALTER TABLE station ADD COLUMN frq_id INTEGER NULL;--
+
+ALTER TABLE location ADD CONSTRAINT loc__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--
+ALTER TABLE generator ADD CONSTRAINT gen__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--
+ALTER TABLE station ADD CONSTRAINT sta__frequency FOREIGN KEY(frq_id) REFERENCES frequency(frq_id_auto);--
+

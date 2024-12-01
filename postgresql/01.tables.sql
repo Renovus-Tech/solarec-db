@@ -120,7 +120,8 @@ CREATE TABLE generator (
   gen_code VARCHAR(100) NULL,
   gen_data_date_max timestamp without time zone NULL,
   gen_data_date_min timestamp without time zone NULL,
-  gen_cert_prov_data VARCHAR(2000)
+  gen_cert_prov_data VARCHAR(2000),
+  frq_id INTEGER NULL
 );--
 
 CREATE TABLE gen_data (
@@ -174,7 +175,8 @@ CREATE TABLE location (
   loc_demo_date timestamp without time zone,
   ctr_id INTEGER NULL,
   loc_type_id INTEGER NULL,
-  loc_cert_prov_data VARCHAR(2000)
+  loc_cert_prov_data VARCHAR(2000),
+  frq_id INTEGER NULL
 );--
 
 CREATE TABLE loc_user (
@@ -261,7 +263,8 @@ CREATE TABLE station (
   sta_code VARCHAR(100) NULL,
   sta_data_date_max timestamp without time zone NULL,
   sta_data_date_min timestamp without time zone NULL,
-  sta_cert_prov_data VARCHAR(2000)
+  sta_cert_prov_data VARCHAR(2000),
+  frq_id INTEGER NULL
 );--
 
 CREATE TABLE stat_definition (
@@ -830,3 +833,13 @@ CREATE TABLE loc_type (
   loc_type_code VARCHAR(255),
   loc_type_text VARCHAR(255)
 );--
+
+CREATE TABLE frequency (
+  frq_id_auto SERIAL NOT NULL,
+  frq_name VARCHAR(200) NOT NULL,
+  frq_id INTEGER NOT NULL,
+  frq_unit VARCHAR(5) NOT NULL,
+  frq_flags VARCHAR(20) NULL
+);--
+
+
