@@ -73,7 +73,6 @@ insert into data_def_parameter (data_def_id, data_def_par_name ) values (4, 'sma
 insert into data_definition(data_def_name, data_def_description, data_def_executable, data_Def_flags)
 values ('Inverter Growatt', null, 'tech.renovus.solarec.inverters.brand.growatt.GrowattInveterService', '011');-- 5
 
-insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'sma.sandbox');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.test');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.client.app_token');--
 insert into data_def_parameter (data_def_id, data_def_par_name ) values (5, 'growatt.client.last_retrieve');--
@@ -96,3 +95,6 @@ values (1, 1, 'SMA #1', -34.7833, -56.0112, 'SMA', 'Sample', 'Sample #1', 50, 'S
 
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_TOTAL_CLOUD_COVER', 506);--
 INSERT INTO data_type (data_type_name, data_type_id) VALUES ('TYPE_SOLAR_STATION_PRECIPITATION', 507);--
+
+
+INSERT INTO frequency (frq_name, frq_amount, frq_unit, frq_flags) VALUES('15 min', 15, 'm', '11111111');
